@@ -1,21 +1,19 @@
-local Cache = LPackage.Cache
+local Chat = LPackage.Chat
 
-local Core = {}
+local App = {}
 do
     -- 主界面移除
-    Core.RemoveFrame = function()
+    local RemoveFrame = function()
         MainMenuBarArtFrame.RightEndCap:Hide()
         MainMenuBarArtFrame.LeftEndCap:Hide()
         MicroButtonAndBagsBar:Hide()
     end
-    -- 消息过滤
-    Core.IgnoreMessage = function()
-        local _cache = Cache.new(30)
-    end
-    Core.Main = function()
-        Core.RemoveFrame()
-        Core.IgnoreMessage()
+
+    -- 代码主入口
+    App.Main = function()
+        Chat.Listen()
+        RemoveFrame()
     end
 end
 -- 通用入口
-Core.Main()
+App.Main()

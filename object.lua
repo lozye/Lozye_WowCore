@@ -1,6 +1,6 @@
-local Object = {_version = "1.0"}
+local Object = {Version = "9.0"}
 do
-    Object.defineProperty = function(map, props)      
+    Object.defineProperty = function(map, props)
         local o = {}
         setmetatable(map, o)
 
@@ -29,6 +29,6 @@ do
     end
     -- end defineProperty
 end
--- return Object 
+-- return Object
 
-LPackage.Object=Object
+LPackage.Object = Object

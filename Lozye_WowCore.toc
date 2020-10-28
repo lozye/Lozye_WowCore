@@ -7,4 +7,5 @@
 package.lua
 object.lua
 cache.lua
+chat.lua
 app.lua
