@@ -1,0 +1,10 @@
+## Interface: 90001
+
+## Title: Lozye Wow Core
+## Notes-zhCN: 魔兽世界通用控制
+## Version: v9.0.0
+
+package.lua
+object.lua
+cache.lua
+app.lua
