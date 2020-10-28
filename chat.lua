@@ -20,7 +20,7 @@ do
         end
         return nil
     end
-    
+
     -- 是否已经替换了聊天频道名称
     local hasset = {}
 
@@ -30,6 +30,7 @@ do
             for index, value in pairs(self.channelList) do
                 if get(value) == temp then
                     self.channelList[index] = temp
+                    break
                 end
             end
             hasset[arg9] = true
