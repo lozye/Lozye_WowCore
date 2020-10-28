@@ -31,4 +31,4 @@ do
 end
 -- return Object 
 
-package.Object=Object
+LPackage.Object=Object
