@@ -18,7 +18,9 @@ do
             if(msg=="focus") then 
                 Focus.Get();   
             elseif(msg=="show") then
-                StatusTrackingBarManager:Show()                 
+                StatusTrackingBarManager:Show()    
+            elseif(msg=="showbag") then
+                MicroButtonAndBagsBar:Show()                
             else  
                 DEFAULT_CHAT_FRAME:AddMessage("use /lo or /lozye ")
                 DEFAULT_CHAT_FRAME:AddMessage("/lo focus   => get the focus info")                
