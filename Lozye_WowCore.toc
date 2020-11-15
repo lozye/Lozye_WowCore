@@ -6,6 +6,7 @@
 
 package.lua
 object.lua
+focus.lua
 cache.lua
 chat.lua
 app.lua

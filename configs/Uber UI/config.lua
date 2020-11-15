@@ -33,8 +33,8 @@ local defaults = {
       pushed            = "Interface\\AddOns\\Uber UI\\textures\\pushed",
       checked           = "Interface\\AddOns\\Uber UI\\textures\\checked",
       equipped          = "Interface\\AddOns\\Uber UI\\textures\\gloss_grey",
-      inverse           = "Interface\\AddOns\\Uber UI\\textures\\button_backgroundinverse",
-      buttonback        = "Interface\\AddOns\\Uber UI\\textures\\button_backgroundlight",
+      inverse           = "Interface\\AddOns\\Uber UI\\textures\\button_background_flat",
+      buttonback        = "Interface\\AddOns\\Uber UI\\textures\\button_background_flat",
       buttonbackflat    = "Interface\\AddOns\\Uber UI\\textures\\button_background_flat",
       outer_shadow      = "Interface\\AddOns\\Uber UI\\textures\\outer_shadow_bold",
     },
@@ -117,7 +117,7 @@ local defaults = {
     colordragon       = true,
   },
   focusframe = {
-    nameinside        = true,
+    nameinside        = false,
   },
   minimap = {
     color             = {r = .05, g = .05, b =.05, a = 1},
@@ -212,7 +212,7 @@ local defaults = {
     useflatbackground   = false,
     gloss               = false,
     backgroundcolor     = {r = .2, g = .2, b = .2, a = .3},
-    shadowcolor         = {r = 0, g = 0, b = 0, a = .4},
+    shadowcolor         = {r = 0, g = 0, b = 0, a = .2},
     bagiconcolor        = {r = 0.4, g = 0.35, b = 0.35, a = 1},
     inset               = 6,
     overridecol         = false,
