@@ -23,7 +23,9 @@ do
                 MicroButtonAndBagsBar:Show()                
             else  
                 DEFAULT_CHAT_FRAME:AddMessage("use /lo or /lozye ")
-                DEFAULT_CHAT_FRAME:AddMessage("/lo focus   => get the focus info")                
+                DEFAULT_CHAT_FRAME:AddMessage("/lo focus   => get the focus info")         
+                DEFAULT_CHAT_FRAME:AddMessage("/lo show    => show StatusTrackingBarManager") 
+                DEFAULT_CHAT_FRAME:AddMessage("/lo showbag => show MicroButtonAndBagsBar")                
             end           
         end
         SLASH_LOZYEFOCUS_SLASHCMD1 = '/lozye'

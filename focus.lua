@@ -11,20 +11,21 @@ do
             return
         end
         print(frame:GetName())
+        return;
         --print(frame:GetItem())
 
-        local regions = frame:GetRegions()
-        for k, v in ipairs(regions) do
-            print(v)
-            if v:GetObjectType() == "FontString" then                
-                table.insert(temp, v:GetText())
-            end
-        end
-
-        local children = frame:GetChildren()
-        for k, v in ipairs(children) do
-            getframeinfo(v)
-        end
+        --        local regions = frame:GetRegions()
+        --        for k, v in ipairs(regions) do
+        --            print(v)
+        --            if v:GetObjectType() == "FontString" then                
+        --                table.insert(temp, v:GetText())
+        --            end
+        --        end
+        --
+        --        local children = frame:GetChildren()
+        --        for k, v in ipairs(children) do
+        --            getframeinfo(v)
+        --        end
     end
 
     -- 执行获取焦点
