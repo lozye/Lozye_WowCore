@@ -1,4 +1,4 @@
-## Interface: 90001
+## Interface: 90002
 
 ## Title: Lozye Wow Core
 ## Notes-zhCN: 魔兽世界通用控制
