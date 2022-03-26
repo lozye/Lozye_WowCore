@@ -9,4 +9,6 @@ object.lua
 focus.lua
 cache.lua
 chat.lua
+lozyecommand.lua
+frameunit.lua
 app.lua
