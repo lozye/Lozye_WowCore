@@ -9,21 +9,64 @@ do
         w:SetMinMaxValues(20, 300)
     end
 
-    -- 未生效
-    local CompactUnit_SetTexture = function(frame)
-        frame.healthBar:SetStatusBarTexture("media\\partyframe")
-        -- frame.healthBar:SetStatusBarTexture(.75, .75, .75)
-        -- print(frame.healthBar)
-        -- print( tostring(frame.name));
+    -- BUFF&DEBUFF 控制
+    local CompactUnit_BuffPlus = function(f)
+        if f.debuffFrames then
+            for i = 1, #f.debuffFrames do
+                local debuff = f.debuffFrames[i]
+                if debuff and debuff:IsShown() then
+                    debuff.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+                    -- debuff:echo();
+                    debuff:ClearAllPoints()
+                    debuff:SetWidth(20)
+                    debuff:SetHeight(20)
+                    debuff:SetPoint("RIGHT", f, "RIGHT", i * 24, 0, true)
+                end
+            end
+        end
+        if f.buffFrames then
+            -- print(f.buffFrames)
+            for i = 1, #f.buffFrames do
+                local buff = f.buffFrames[i]
+                if buff and buff.SetScale and buff:IsShown() then
+                    buff:ClearAllPoints()
+                    buff:SetWidth(15)
+                    buff:SetHeight(15)
+                    buff:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", (i - 1) * -18 - 2, 2, true)
+                end
+            end
+        end
+    end -- end CompactUnit_BuffPlus
+
+    -- 不要跨服名称
+    local CompactUnit_NamePlus = function(f)
+        if not f.name or not f.name:IsShown() then
+            return
+        end
+        local name = UnitFullName(f.unit) or (GetUnitName(f.unit, true))
+        f.name:SetText(name)
     end
 
-    -- 团队框架增强2 不要跨服名称
+    local DefaultCompactUnitPlus = function(frame)
+        CompactUnitFrame_SetMaxBuffs(frame,5);
+    end
+
+    -- 团队框架增强2
     local CompactUnitHook = function()
-        hooksecurefunc('CompactUnitFrame_UpdateName', function (f)          
-            if not f.name or not f.name:IsShown() then return end      
-            local name = UnitFullName(f.unit) or (GetUnitName(f.unit, true))     
-            f.name:SetText(name)
-        end)
+    
+        --不要跨服名称
+        hooksecurefunc("CompactUnitFrame_UpdateName", CompactUnit_NamePlus)
+        -- debuff 设置
+        hooksecurefunc("CompactUnitFrame_UpdateAuras", CompactUnit_BuffPlus)
+
+        -- 默认设置
+        --    hooksecurefunc('DefaultCompactUnitFrameSetup',DefaultCompactUnitPlus);
+        --    hooksecurefunc('CompactUnitFrame_SetUnit', function (f, unit)
+        --        if not unit then return end
+        --        if not f:IsShown() then return end    
+        --        DefaultCompactUnitPlus(f)
+        --    end)
+       
     end
 
     -- 动作条增强
