@@ -9,6 +9,7 @@ do
         w:SetMinMaxValues(20, 300)
     end
 
+    -- 未生效
     local CompactUnit_SetTexture = function(frame)
         frame.healthBar:SetStatusBarTexture("media\\partyframe")
         -- frame.healthBar:SetStatusBarTexture(.75, .75, .75)
