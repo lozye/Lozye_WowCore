@@ -14,7 +14,7 @@ do
         if f.debuffFrames then
             for i = 1, #f.debuffFrames do
                 local debuff = f.debuffFrames[i]
-                if debuff and debuff:IsShown() then
+                if debuff and debuff.SetScale and debuff:IsShown() then
                     debuff.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
                     -- debuff:echo();
                     debuff:ClearAllPoints()
@@ -40,11 +40,25 @@ do
 
     -- 不要跨服名称
     local CompactUnit_NamePlus = function(f)
-        if not f.name or not f.name:IsShown() then
-            return
+        if not GetRaidFrame(f) then return end
+        if  f.name and f.name:IsShown() then            
+            local name = UnitFullName(f.unit) or (GetUnitName(f.unit, true))
+            f.name:SetText(name)
         end
-        local name = UnitFullName(f.unit) or (GetUnitName(f.unit, true))
-        f.name:SetText(name)
+    end
+
+
+    GetRaidFrame=function(f)
+        if not f then return false end
+        if f.unit and string.find(f.unit, 'nameplate') then return false end
+    
+        local name = f:GetName()
+        if not name then return false end
+        local isRaidFrame = string.find(name, 'CompactRaidFrame')
+        local isPartyFrame = string.find(name, 'CompactPartyFrame')
+        local isRaidGroupFrame = string.find(name, 'CompactRaidGroup')
+        if not isRaidFrame and not isPartyFrame and not isRaidGroupFrame  then return false end
+        return true
     end
 
     local DefaultCompactUnitPlus = function(frame)
