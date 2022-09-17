@@ -1,5 +1,4 @@
-## Interface: 90200
-## Interface: 90200
+## Interface: 90207
 ## Title: Lozye Wow Core
 ## Notes-zhCN: 魔兽世界通用控制
 ## Version: v9.0.0
