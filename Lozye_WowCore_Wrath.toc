@@ -1,0 +1,11 @@
+## Interface: 30400
+## Title: Lozye Wow Core
+## Notes-zhCN: 魔兽世界通用控制
+## Version: v9.0.0
+
+wrath\package.lua
+wrath\object.lua
+common\tooltip.lua
+wow\chat.lua
+wrath\app.lua
+
