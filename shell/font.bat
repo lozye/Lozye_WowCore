@@ -9,5 +9,7 @@ if %error% EQU 0 (
     copy %info% %wow_dir%\ARHei.ttf
     copy %info% %wow_dir%\ARKai_C.ttf
     copy %info% %wow_dir%\Frizqt__.ttf
-    copy %info% %wow_dir%\ARKai_T.ttf   
+    copy %info% %wow_dir%\ARKai_T.ttf 
+    copy %info% %wow_dir%\Fight.TTF   
+    copy %info% %wow_dir%\Damage.TTF     
 )
