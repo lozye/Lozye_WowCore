@@ -3,9 +3,12 @@
 ## Notes-zhCN: 魔兽世界通用控制
 ## Version: v9.0.0
 
-wrath\package.lua
-wrath\object.lua
-common\tooltip.lua
-wow\chat.lua
-wrath\app.lua
+Common\package.lua
+Common\object.lua
+Common\cache.lua
+Universal\lozyecommand.lua
+Universal\frameunit.lua
+Universal\tooltip.lua
+Wrath\chat.lua
+Wrath\app.lua
 
