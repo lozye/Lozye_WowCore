@@ -3,10 +3,10 @@
 ## Notes-zhCN: 青烟的通用控制
 ## Version: v9.0.0
 
-package.lua
-object.lua
-focus.lua
-cache.lua
+common\package.lua
+common\object.lua
+common\focus.lua
+common\cache.lua
 chat.lua
 lozyecommand.lua
 frameunit.lua

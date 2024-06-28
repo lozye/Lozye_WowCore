@@ -12,10 +12,10 @@
             "cwd":"${workspaceFolder}",
             "program": {
                 "lua": "C:/bin/openresty-1.17.8.2-win32/luajit.exe",
-                "file": "${workspaceFolder}/app.lua"
+                "file": "${workspaceFolder}/src/app.lua"
             },
             "environment": {
-                "LUA_PATH": "${workspaceFolder}/?.lua"
+                "LUA_PATH": "${workspaceFolder}/**/?.lua"
             }
         }
     ]
